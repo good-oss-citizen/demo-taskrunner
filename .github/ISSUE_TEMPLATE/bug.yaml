@@ -1,0 +1,48 @@
+name: Bug Report
+description: File a bug report for taskrunner
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report.
+  - type: input
+    id: version
+    attributes:
+      label: taskrunner version
+      description: Output of `taskrunner --version`
+      placeholder: v1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and its impact.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Describe the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal, reproducible steps.
+      placeholder: |
+        1. Run `taskrunner ...`
+        2. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or output
+      description: Paste any error output. This will be rendered as a shell block.
+      render: shell
+    validations:
+      required: false
